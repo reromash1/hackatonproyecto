@@ -14,4 +14,5 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 npm install
-npm install bootstrap
+
+npm install bootstrap react-bootstrap @popperjs/core react-icons react-router-dom
