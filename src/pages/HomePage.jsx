@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar, Nav, Container, Button, Offcanvas } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button, Offcanvas, Row, Col, Card } from 'react-bootstrap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 
 const HomePage = () => {
@@ -10,20 +10,16 @@ const HomePage = () => {
   return (
     <div className="home-page">
       {/* Navbar */}
-      <Navbar expand="lg" className="py-3 shadow-sm">
+      <Navbar expand="lg" className="py-3 bg-white shadow-sm">
         <Container>
           <Navbar.Brand href="#">
-            <img 
-              src="https://via.placeholder.com/150x50?text=BAQ.EC" 
-              alt="Logo" 
-              height="40"
-            />
+            <span className="fw-bold fs-3">Banco de ALIMENTOS <small className="d-block">Quito</small></span>
           </Navbar.Brand>
           
           {/* Mobile menu button */}
           <Button 
-            variant="outline-primary" 
-            className="d-lg-none"
+            variant="outline-danger" 
+            className="d-lg-none border-0"
             onClick={toggleMobileMenu}
           >
             {showMobileMenu ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -31,23 +27,14 @@ const HomePage = () => {
 
           {/* Desktop menu */}
           <Navbar.Collapse id="basic-navbar-nav" className="d-none d-lg-block">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto align-items-center">
               <Nav.Link href="#" className="mx-2 active">Inicio</Nav.Link>
               <Nav.Link href="#" className="mx-2">Nosotros</Nav.Link>
-              <div className="nav-item dropdown mx-2">
-                <Nav.Link href="#" className="dropdown-toggle" role="button">
-                  Servicios <FiChevronDown className="ms-1" />
-                </Nav.Link>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">Diseño Web</a>
-                  <a className="dropdown-item" href="#">Marketing Digital</a>
-                  <a className="dropdown-item" href="#">Desarrollo de Software</a>
-                </div>
-              </div>
-              <Nav.Link href="#" className="mx-2">Portafolio</Nav.Link>
+              <Nav.Link href="#" className="mx-2">Impacto</Nav.Link>
+              <Nav.Link href="#" className="mx-2">Proceso</Nav.Link>
               <Nav.Link href="#" className="mx-2">Contacto</Nav.Link>
+              <Button variant="danger" className="ms-3">Donar ahora</Button>
             </Nav>
-            <Button variant="primary" className="ms-3">Cotizar ahora</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -61,19 +48,10 @@ const HomePage = () => {
           <Nav className="flex-column">
             <Nav.Link href="#" className="mb-2">Inicio</Nav.Link>
             <Nav.Link href="#" className="mb-2">Nosotros</Nav.Link>
-            <div className="nav-item dropdown mb-2">
-              <Nav.Link href="#" className="dropdown-toggle" role="button">
-                Servicios <FiChevronDown className="ms-1" />
-              </Nav.Link>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">Diseño Web</a>
-                <a className="dropdown-item" href="#">Marketing Digital</a>
-                <a className="dropdown-item" href="#">Desarrollo de Software</a>
-              </div>
-            </div>
-            <Nav.Link href="#" className="mb-2">Portafolio</Nav.Link>
+            <Nav.Link href="#" className="mb-2">Impacto</Nav.Link>
+            <Nav.Link href="#" className="mb-2">Proceso</Nav.Link>
             <Nav.Link href="#" className="mb-2">Contacto</Nav.Link>
-            <Button variant="primary" className="mt-3">Cotizar ahora</Button>
+            <Button variant="danger" className="mt-3">Donar ahora</Button>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
@@ -81,127 +59,170 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="hero-section py-5 bg-light">
         <Container>
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4 mb-lg-0">
-              <h1 className="display-4 fw-bold mb-4">Soluciones digitales para tu negocio</h1>
-              <p className="lead mb-4">
-                Creamos experiencias digitales impactantes que ayudan a tu marca a destacar en el mundo online.
-              </p>
+          <Row className="align-items-center">
+            <Col lg={6} className="mb-4 mb-lg-0">
+              <h1 className="display-4 fw-bold mb-4">¿QUIERES DONAR ALIMENTOS?</h1>
+              <h2 className="h3 mb-3">¿QUIERES DONAR DINERO?</h2>
+              <h2 className="h3 mb-4">¿QUIERES SER VOLUNTARIO?</h2>
               <div className="d-flex flex-wrap gap-3">
-                <Button variant="primary" size="lg">Nuestros servicios</Button>
-                <Button variant="outline-primary" size="lg">Contactar ahora</Button>
+                <Button variant="danger" size="lg">Donar alimentos</Button>
+                <Button variant="outline-danger" size="lg">Ser voluntario</Button>
               </div>
-            </div>
-            <div className="col-lg-6">
+            </Col>
+            <Col lg={6}>
               <img 
-                src="https://via.placeholder.com/600x400?text=Hero+Image" 
-                alt="Hero" 
+                src="https://img.europapress.es/fotoweb/fotonoticia_20161125191701_690.jpg" 
+                alt="Banco de Alimentos Quito" 
                 className="img-fluid rounded shadow"
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Container>
       </section>
 
-      {/* Services Section */}
-      <section className="py-5">
+      {/* Mission Section */}
+      <section className="py-5 bg-white">
         <Container>
-          <div className="text-center mb-5">
-            <h2 className="fw-bold">Nuestros Servicios</h2>
-            <p className="text-muted">Ofrecemos soluciones completas para tu presencia digital</p>
-          </div>
-          <div className="row g-4">
+          <Row className="justify-content-center">
+            <Col lg={8} className="text-center">
+              <h2 className="fw-bold mb-4">¿Qué hace el Banco de Alimentos Quito?</h2>
+              <p className="lead">
+                El Banco de Alimentos Quito lucha contra el hambre y la desnutrición, rescatamos alimento y lo distribuimos en donación a personas vulnerables mediante un sistema de gestión certificado que garantiza trazabilidad y nos permite ser un aliado estratégico en materia de responsabilidad social empresarial.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Impact Section */}
+      <section className="py-5 bg-light">
+        <Container>
+          <h2 className="text-center fw-bold mb-5">Impacto Alcanzado</h2>
+          <Row className="g-4 text-center">
+            <Col md={6} lg={3}>
+              <Card className="h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <h3 className="text-danger">130,919,469</h3>
+                  <p className="fw-bold">COMIDA</p>
+                  <small className="text-muted">(2003–2024)</small>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={6} lg={3}>
+              <Card className="h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <h3 className="text-danger">149</h3>
+                  <p className="fw-bold">Organizaciones Sociales Atendidas</p>
+                  <small className="text-muted">(2024)</small>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={6} lg={3}>
+              <Card className="h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <h3 className="text-danger">38,167,550</h3>
+                  <p className="fw-bold">Kilos Entregados</p>
+                  <small className="text-muted">(2003 – 2024)</small>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={6} lg={3}>
+              <Card className="h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <h3 className="text-danger">+82,973</h3>
+                  <p className="fw-bold">Personas beneficiadas</p>
+                  <small className="text-muted">(C/Mes)</small>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-5 bg-white">
+        <Container>
+          <h2 className="text-center fw-bold mb-5">¿Qué hace el BAQ para luchar contra el hambre?</h2>
+          <Row className="g-4">
             {[
               {
-                icon: '🖥️',
-                title: 'Diseño Web',
-                description: 'Sitios web modernos y responsivos que se adaptan a todos los dispositivos'
+                title: 'RESCATE DE ALIMENTO',
+                description: 'Recuperamos alimentos que serían desperdiciados pero que son perfectamente aptos para el consumo.'
               },
               {
-                icon: '📱',
-                title: 'Apps Móviles',
-                description: 'Aplicaciones nativas e híbridas para iOS y Android'
+                title: 'CLASIFICACIÓN Y ALMACENAMIENTO',
+                description: 'Procesamos y almacenamos los alimentos bajo estrictos controles de calidad.'
               },
               {
-                icon: '📈',
-                title: 'Marketing Digital',
-                description: 'Estrategias para aumentar tu presencia online y generar leads'
+                title: 'DISTRIBUCIÓN',
+                description: 'Entregamos los alimentos a organizaciones sociales que atienden a población vulnerable.'
               },
               {
-                icon: '🛒',
-                title: 'E-commerce',
-                description: 'Tiendas online completas con sistemas de pago integrados'
+                title: 'TRAZABILIDAD',
+                description: 'Garantizamos un sistema de gestión certificado que permite seguir todo el proceso.'
               }
-            ].map((service, index) => (
-              <div className="col-md-6 col-lg-3" key={index}>
-                <div className="card h-100 border-0 shadow-sm">
-                  <div className="card-body text-center p-4">
-                    <div className="display-4 mb-3">{service.icon}</div>
-                    <h5 className="card-title">{service.title}</h5>
-                    <p className="card-text text-muted">{service.description}</p>
-                    <a href="#" className="btn btn-link text-primary text-decoration-none">
-                      Más información
-                    </a>
-                  </div>
-                </div>
-              </div>
+            ].map((item, index) => (
+              <Col md={6} lg={3} key={index}>
+                <Card className="h-100 border-0 shadow-sm">
+                  <Card.Body className="p-4">
+                    <h4 className="text-danger">{item.title}</h4>
+                    <p>{item.description}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
             ))}
-          </div>
+          </Row>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="py-5 bg-primary text-white">
+      <section className="py-5 bg-danger text-white">
         <Container className="text-center">
-          <h2 className="fw-bold mb-4">¿Listo para llevar tu negocio al siguiente nivel?</h2>
-          <p className="lead mb-4">Contáctanos hoy mismo y descubre cómo podemos ayudarte</p>
-          <Button variant="light" size="lg">Solicitar consulta gratuita</Button>
+          <h2 className="fw-bold mb-4">¡Únete a nuestra causa!</h2>
+          <p className="lead mb-4">Cada aporte cuenta en la lucha contra el hambre en Quito</p>
+          <Button variant="light" size="lg" className="me-3">Donar ahora</Button>
+          <Button variant="outline-light" size="lg">Ser voluntario</Button>
         </Container>
       </section>
 
       {/* Footer */}
       <footer className="py-5 bg-dark text-white">
         <Container>
-          <div className="row">
-            <div className="col-lg-4 mb-4">
-              <img 
-                src="https://via.placeholder.com/150x50?text=BAQ.EC" 
-                alt="Logo" 
-                height="40"
-                className="mb-3"
-              />
-              <p>Somos una agencia digital comprometida con el éxito de nuestros clientes.</p>
-            </div>
-            <div className="col-lg-2 col-md-6 mb-4">
+          <Row>
+            <Col lg={4} className="mb-4">
+              <h3 className="fw-bold">Banco de ALIMENTOS <small className="d-block">Quito</small></h3>
+              <p className="mt-3">Luchando contra el hambre y la desnutrición en nuestra ciudad.</p>
+            </Col>
+            <Col lg={2} md={6} className="mb-4">
               <h5>Enlaces</h5>
               <ul className="list-unstyled">
                 <li className="mb-2"><a href="#" className="text-white text-decoration-none">Inicio</a></li>
                 <li className="mb-2"><a href="#" className="text-white text-decoration-none">Nosotros</a></li>
-                <li className="mb-2"><a href="#" className="text-white text-decoration-none">Servicios</a></li>
+                <li className="mb-2"><a href="#" className="text-white text-decoration-none">Impacto</a></li>
                 <li className="mb-2"><a href="#" className="text-white text-decoration-none">Contacto</a></li>
               </ul>
-            </div>
-            <div className="col-lg-3 col-md-6 mb-4">
+            </Col>
+            <Col lg={3} md={6} className="mb-4">
               <h5>Contacto</h5>
               <address>
-                <p>Av. Principal 123, Guayaquil</p>
-                <p>Email: info@baq.ec</p>
-                <p>Teléfono: +593 99 999 9999</p>
+                <p>Quito, Ecuador</p>
+                <p>Email: info@baq.org.ec</p>
+                <p>Teléfono: +593 2 123 4567</p>
               </address>
-            </div>
-            <div className="col-lg-3 mb-4">
-              <h5>Redes Sociales</h5>
+            </Col>
+            <Col lg={3} className="mb-4">
+              <h5>Síguenos</h5>
               <div className="d-flex gap-3">
-                <a href="#" className="text-white"><i className="bi bi-facebook fs-4"></i></a>
-                <a href="#" className="text-white"><i className="bi bi-instagram fs-4"></i></a>
-                <a href="#" className="text-white"><i className="bi bi-linkedin fs-4"></i></a>
-                <a href="#" className="text-white"><i className="bi bi-whatsapp fs-4"></i></a>
+                <a href="#" className="text-white fs-4"><i className="bi bi-facebook"></i></a>
+                <a href="#" className="text-white fs-4"><i className="bi bi-instagram"></i></a>
+                <a href="#" className="text-white fs-4"><i className="bi bi-twitter"></i></a>
+                <a href="#" className="text-white fs-4"><i className="bi bi-youtube"></i></a>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
           <hr className="my-4" />
           <div className="text-center">
-            <p className="mb-0">&copy; {new Date().getFullYear()} BAQ.EC. Todos los derechos reservados.</p>
+            <p className="mb-0">&copy; {new Date().getFullYear()} Banco de Alimentos Quito. Todos los derechos reservados.</p>
           </div>
         </Container>
       </footer>
