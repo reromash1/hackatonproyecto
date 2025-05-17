@@ -1,27 +1,33 @@
 import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
   return (
-    <section className="bg-primary text-white py-5">
+    <section id="inicio" className="hero-section py-5 bg-light">
       <Container>
         <Row className="align-items-center">
-          <Col lg={6}>
-            <h1 className="display-4 fw-bold mb-4">Soluciones digitales para tu negocio</h1>
-            <p className="lead mb-4">
-              Ofrecemos servicios de desarrollo web, marketing digital y más para ayudar a tu empresa a crecer en línea.
-            </p>
-            <Button variant="light" size="lg" className="me-3">
-              Nuestros servicios
-            </Button>
-            <Button variant="outline-light" size="lg">
-              Contactarnos
-            </Button>
+          <Col lg={6} className="mb-4 mb-lg-0">
+            <h1 className="display-4 fw-bold mb-4">¿QUIERES DONAR ALIMENTOS?</h1>
+            <h2 className="h3 mb-3">¿QUIERES DONAR DINERO?</h2>
+            <h2 className="h3 mb-4">¿QUIERES SER VOLUNTARIO?</h2>
+            <div className="d-flex flex-wrap gap-3">
+              <Button 
+                as={Link}
+                to="/donaciones"
+                variant="warning" 
+                size="lg" 
+                className="text-white"
+              >
+                Donar ahora
+              </Button>
+              <Button variant="outline-warning" size="lg">Ser voluntario</Button>
+            </div>
           </Col>
           <Col lg={6}>
             <img 
-              src="https://via.placeholder.com/600x400" 
-              alt="Hero" 
-              className="img-fluid rounded"
+              src="https://img.europapress.es/fotoweb/fotonoticia_20161125191701_690.jpg" 
+              alt="Banco de Alimentos" 
+              className="img-fluid rounded shadow"
             />
           </Col>
         </Row>
