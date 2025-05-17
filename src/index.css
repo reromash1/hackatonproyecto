@@ -1,7 +1,41 @@
 :root {
-  --bs-danger: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-warning: #fd7e14;
+  --bs-warning-rgb: 253, 126, 20;
 }
 
+/* Sobreescribir colores de Bootstrap para el tema naranja */
+.bg-warning {
+  background-color: var(--bs-orange) !important;
+}
+
+.btn-warning {
+  background-color: var(--bs-orange);
+  border-color: var(--bs-orange);
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #e67312;
+  border-color: #e67312;
+  color: white;
+}
+
+.btn-outline-warning {
+  color: var(--bs-orange);
+  border-color: var(--bs-orange);
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--bs-orange);
+  color: white;
+}
+
+.text-warning {
+  color: var(--bs-orange) !important;
+}
+
+/* Estilos generales */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -17,7 +51,7 @@ body {
 }
 
 .nav-link.active {
-  color: var(--bs-danger) !important;
+  color: var(--bs-orange) !important;
   font-weight: 600;
 }
 
@@ -33,11 +67,6 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-}
-
-/* Impact numbers */
-.text-danger {
-  color: var(--bs-danger) !important;
 }
 
 /* Responsive adjustments */

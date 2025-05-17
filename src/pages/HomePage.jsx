@@ -18,7 +18,7 @@ const HomePage = () => {
           
           {/* Mobile menu button */}
           <Button 
-            variant="outline-danger" 
+            variant="outline-warning" 
             className="d-lg-none border-0"
             onClick={toggleMobileMenu}
           >
@@ -33,7 +33,7 @@ const HomePage = () => {
               <Nav.Link href="#impacto" className="mx-2">Impacto</Nav.Link>
               <Nav.Link href="#proceso" className="mx-2">Proceso</Nav.Link>
               <Nav.Link href="#contacto" className="mx-2">Contacto</Nav.Link>
-              <Button variant="danger" className="ms-3">Donar ahora</Button>
+              <Button variant="warning" className="ms-3 text-white">Donar ahora</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -51,14 +51,13 @@ const HomePage = () => {
             <Nav.Link href="#impacto" className="mb-2">Impacto</Nav.Link>
             <Nav.Link href="#proceso" className="mb-2">Proceso</Nav.Link>
             <Nav.Link href="#contacto" className="mb-2">Contacto</Nav.Link>
-            <Button variant="danger" className="mt-3">Donar ahora</Button>
+            <Button variant="warning" className="mt-3 text-white">Donar ahora</Button>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
 
       {/* Hero Section */}
-      <section id="inicio" className="hero-section py-5 bg-light"></section>
-      <section className="hero-section py-5 bg-light">
+      <section id="inicio" className="hero-section py-5 bg-light">
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="mb-4 mb-lg-0">
@@ -66,8 +65,8 @@ const HomePage = () => {
               <h2 className="h3 mb-3">¿QUIERES DONAR DINERO?</h2>
               <h2 className="h3 mb-4">¿QUIERES SER VOLUNTARIO?</h2>
               <div className="d-flex flex-wrap gap-3">
-                <Button variant="danger" size="lg">Donar alimentos</Button>
-                <Button variant="outline-danger" size="lg">Ser voluntario</Button>
+                <Button variant="warning" size="lg" className="text-white">Donar alimentos</Button>
+                <Button variant="outline-warning" size="lg">Ser voluntario</Button>
               </div>
             </Col>
             <Col lg={6}>
@@ -82,8 +81,7 @@ const HomePage = () => {
       </section>
 
       {/* Mission Section */}
-      <section id="nosotros" className="py-5 bg-white"></section>
-      <section className="py-5 bg-white">
+      <section id="nosotros" className="py-5 bg-white">
         <Container>
           <Row className="justify-content-center">
             <Col lg={8} className="text-center">
@@ -97,15 +95,14 @@ const HomePage = () => {
       </section>
 
       {/* Impact Section */}
-      <section id="impacto" className="py-5 bg-light"></section>
-      <section className="py-5 bg-light">
+      <section id="impacto" className="py-5 bg-light">
         <Container>
           <h2 className="text-center fw-bold mb-5">Impacto Alcanzado</h2>
           <Row className="g-4 text-center">
             <Col md={6} lg={3}>
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <h3 className="text-danger">130,919,469</h3>
+                  <h3 className="text-warning">130,919,469</h3>
                   <p className="fw-bold">COMIDA</p>
                   <small className="text-muted">(2003–2024)</small>
                 </Card.Body>
@@ -114,7 +111,7 @@ const HomePage = () => {
             <Col md={6} lg={3}>
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <h3 className="text-danger">149</h3>
+                  <h3 className="text-warning">149</h3>
                   <p className="fw-bold">Organizaciones Sociales Atendidas</p>
                   <small className="text-muted">(2024)</small>
                 </Card.Body>
@@ -123,7 +120,7 @@ const HomePage = () => {
             <Col md={6} lg={3}>
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <h3 className="text-danger">38,167,550</h3>
+                  <h3 className="text-warning">38,167,550</h3>
                   <p className="fw-bold">Kilos Entregados</p>
                   <small className="text-muted">(2003 – 2024)</small>
                 </Card.Body>
@@ -132,7 +129,7 @@ const HomePage = () => {
             <Col md={6} lg={3}>
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <h3 className="text-danger">+82,973</h3>
+                  <h3 className="text-warning">+82,973</h3>
                   <p className="fw-bold">Personas beneficiadas</p>
                   <small className="text-muted">(C/Mes)</small>
                 </Card.Body>
@@ -143,8 +140,7 @@ const HomePage = () => {
       </section>
 
       {/* Process Section */}
-      <section id="proceso" className="py-5 bg-white"></section>
-      <section className="py-5 bg-white">
+      <section id="proceso" className="py-5 bg-white">
         <Container>
           <h2 className="text-center fw-bold mb-5">¿Qué hace el BAQ para luchar contra el hambre?</h2>
           <Row className="g-4">
@@ -169,7 +165,7 @@ const HomePage = () => {
               <Col md={6} lg={3} key={index}>
                 <Card className="h-100 border-0 shadow-sm">
                   <Card.Body className="p-4">
-                    <h4 className="text-danger">{item.title}</h4>
+                    <h4 className="text-warning">{item.title}</h4>
                     <p>{item.description}</p>
                   </Card.Body>
                 </Card>
@@ -180,8 +176,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contacto" className="py-5 bg-danger text-white"></section>
-      <section className="py-5 bg-danger text-white">
+      <section id="contacto" className="py-5 bg-warning text-white">
         <Container className="text-center">
           <h2 className="fw-bold mb-4">¡Únete a nuestra causa!</h2>
           <p className="lead mb-4">Cada aporte cuenta en la lucha contra el hambre en Quito</p>
@@ -201,10 +196,10 @@ const HomePage = () => {
             <Col lg={2} md={6} className="mb-4">
               <h5>Enlaces</h5>
               <ul className="list-unstyled">
-                <li className="mb-2"><a href="#" className="text-white text-decoration-none">Inicio</a></li>
-                <li className="mb-2"><a href="#" className="text-white text-decoration-none">Nosotros</a></li>
-                <li className="mb-2"><a href="#" className="text-white text-decoration-none">Impacto</a></li>
-                <li className="mb-2"><a href="#" className="text-white text-decoration-none">Contacto</a></li>
+                <li className="mb-2"><a href="#inicio" className="text-white text-decoration-none">Inicio</a></li>
+                <li className="mb-2"><a href="#nosotros" className="text-white text-decoration-none">Nosotros</a></li>
+                <li className="mb-2"><a href="#impacto" className="text-white text-decoration-none">Impacto</a></li>
+                <li className="mb-2"><a href="#contacto" className="text-white text-decoration-none">Contacto</a></li>
               </ul>
             </Col>
             <Col lg={3} md={6} className="mb-4">
