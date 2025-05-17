@@ -28,11 +28,11 @@ const HomePage = () => {
           {/* Desktop menu */}
           <Navbar.Collapse id="basic-navbar-nav" className="d-none d-lg-block">
             <Nav className="ms-auto align-items-center">
-              <Nav.Link href="#" className="mx-2 active">Inicio</Nav.Link>
-              <Nav.Link href="#" className="mx-2">Nosotros</Nav.Link>
-              <Nav.Link href="#" className="mx-2">Impacto</Nav.Link>
-              <Nav.Link href="#" className="mx-2">Proceso</Nav.Link>
-              <Nav.Link href="#" className="mx-2">Contacto</Nav.Link>
+              <Nav.Link href="#inicio" className="mx-2 active">Inicio</Nav.Link>
+              <Nav.Link href="#nosotros" className="mx-2">Nosotros</Nav.Link>
+              <Nav.Link href="#impacto" className="mx-2">Impacto</Nav.Link>
+              <Nav.Link href="#proceso" className="mx-2">Proceso</Nav.Link>
+              <Nav.Link href="#contacto" className="mx-2">Contacto</Nav.Link>
               <Button variant="danger" className="ms-3">Donar ahora</Button>
             </Nav>
           </Navbar.Collapse>
@@ -46,17 +46,18 @@ const HomePage = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link href="#" className="mb-2">Inicio</Nav.Link>
-            <Nav.Link href="#" className="mb-2">Nosotros</Nav.Link>
-            <Nav.Link href="#" className="mb-2">Impacto</Nav.Link>
-            <Nav.Link href="#" className="mb-2">Proceso</Nav.Link>
-            <Nav.Link href="#" className="mb-2">Contacto</Nav.Link>
+            <Nav.Link href="#inicio" className="mb-2">Inicio</Nav.Link>
+            <Nav.Link href="#nosotros" className="mb-2">Nosotros</Nav.Link>
+            <Nav.Link href="#impacto" className="mb-2">Impacto</Nav.Link>
+            <Nav.Link href="#proceso" className="mb-2">Proceso</Nav.Link>
+            <Nav.Link href="#contacto" className="mb-2">Contacto</Nav.Link>
             <Button variant="danger" className="mt-3">Donar ahora</Button>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
 
       {/* Hero Section */}
+      <section id="inicio" className="hero-section py-5 bg-light"></section>
       <section className="hero-section py-5 bg-light">
         <Container>
           <Row className="align-items-center">
@@ -81,6 +82,7 @@ const HomePage = () => {
       </section>
 
       {/* Mission Section */}
+      <section id="nosotros" className="py-5 bg-white"></section>
       <section className="py-5 bg-white">
         <Container>
           <Row className="justify-content-center">
@@ -95,6 +97,7 @@ const HomePage = () => {
       </section>
 
       {/* Impact Section */}
+      <section id="impacto" className="py-5 bg-light"></section>
       <section className="py-5 bg-light">
         <Container>
           <h2 className="text-center fw-bold mb-5">Impacto Alcanzado</h2>
@@ -140,6 +143,7 @@ const HomePage = () => {
       </section>
 
       {/* Process Section */}
+      <section id="proceso" className="py-5 bg-white"></section>
       <section className="py-5 bg-white">
         <Container>
           <h2 className="text-center fw-bold mb-5">¿Qué hace el BAQ para luchar contra el hambre?</h2>
@@ -176,6 +180,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
+      <section id="contacto" className="py-5 bg-danger text-white"></section>
       <section className="py-5 bg-danger text-white">
         <Container className="text-center">
           <h2 className="fw-bold mb-4">¡Únete a nuestra causa!</h2>
